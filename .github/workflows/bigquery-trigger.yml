@@ -1,25 +1,29 @@
-name: Query BigQuery and Send Email
+name: Query BigQuery and Send Email #Workflow name
 
+#Triggers
 on:
+  #Triger to run every 5 minutes to check if new row came in
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *' 
 
+#Jobs
 jobs:
-  query-bigquery:
-    runs-on: ubuntu-latest
+  query-bigquery: #Job name
+    runs-on: ubuntu-latest #Platform
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository #Step 1, iniate repository
+        uses: actions/checkout@v3 #path
 
-      - name: Install Google Cloud SDK
-        run: |
+      - name: Install Google Cloud SDK #install GC SDK
+        run: | #step by step
           sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }} #Credits
 
+      # run query to check new row  
       - name: Query BigQuery
         id: check_new_rows
         run: |
@@ -31,14 +35,15 @@ jobs:
             echo "NEW_ROWS_FOUND=false" >> $GITHUB_ENV
           fi
 
+        #Job- send email about the new row
       - name: Send Email Notification
         if: env.NEW_ROWS_FOUND == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
+          username: ${{ secrets.SMTP_USERNAME }} #use username from secrets
+          password: ${{ secrets.SMTP_PASSWORD }} #use password from secrets
           subject: "🚀 שורה חדשה נוספה לטבלה SMS ב-BigQuery!"
           body: "התראה: נוספה שורה חדשה לטבלה ב-BigQuery. בדוק את הנתונים שלך כאן: https://console.cloud.google.com/bigquery"
           to: "ilaydamari@gmail.com"
