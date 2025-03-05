@@ -1,1 +1,25 @@
+name: Query BigQuery
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/5 * * * *'  # רץ כל 5 דקות
+
+jobs:
+  query-bigquery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      - name: Query BigQuery
+        run: |
+          bq query --use_legacy_sql=false "SELECT * FROM `your_project.your_dataset.your_table` LIMIT 5"
 
