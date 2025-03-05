@@ -4,7 +4,7 @@ name: Query BigQuery and Send Email #Workflow name
 on:
   #Triger to run every 5 minutes to check if new row came in
   schedule:
-    - cron: '*/5 * * * *' 
+    - cron: '*/1 * * * *' 
 
 #Jobs
 jobs:
