@@ -1,24 +1,3 @@
-DEFAULT 2025-12-03T09:54:47.883152Z [2025-12-03T09:54:47.884Z] [INFO] Received event: | Meta: {"message":{"attributes":{"bucketId":"sda-dev-untrusted-bucket","eventTime":"2025-12-03T08:33:30.167295Z","eventType":"OBJECT_FINALIZE","notificationConfig":"projects/_/buckets/sda-dev-untrusted-bucket/notificationConfigs/1","objectGeneration":"1764750810163677","objectId":"TLEs/celestrack","payloadFormat":"JSON_API_V1"},"data":"ewogICJraW5kIjogInN0b3JhZ2Ujb2JqZWN0IiwKICAiaWQiOiAic2RhLWRldi11bnRydXN0ZWQtYnVja2V0L1RMRXMvY2VsZXN0cmFjay8xNzY0NzUwODEwMTYzNjc3IiwKICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vc3RvcmFnZS92MS9iL3NkYS1kZXYtdW50cnVzdGVkLWJ1Y2tldC9vL1RMRXMlMkZjZWxlc3RyYWNrIiwKICAibmFtZSI6ICJUTEVzL2NlbGVzdHJhY2siLAogICJidWNrZXQiOiAic2RhLWRldi11bnRydXN0ZWQtYnVja2V0IiwKICAiZ2VuZXJhdGlvbiI6ICIxNzY0NzUwODEwMTYzNjc3IiwKICAibWV0YWdlbmVyYXRpb24iOiAiMSIsCiAgImNvbnRlbnRUeXBlIjogImFwcGxpY2F0aW9uL2pzb24iLAogICJ0aW1lQ3JlYXRlZCI6ICIyMDI1LTEyLTAzVDA4OjMzOjMwLjE2N1oiLAogICJ1cGRhdGVkIjogIjIwMjUtMTItMDNUMDg6MzM6MzAuMTY3WiIsCiAgInN0b3JhZ2VDbGFzcyI6ICJTVEFOREFSRCIsCiAgInRpbWVTdG9yYWdlQ2xhc3NVcGRhdGVkIjogIjIwMjUtMTItMDNUMDg6MzM6MzAuMTY3WiIsCiAgInNpemUiOiAiNTY3Njg3MCIsCiAgIm1kNUhhc2giOiAiSDl4dmlSTTBTY1JwR1VCazhHdHF3Zz09IiwKICAibWVkaWFMaW5rIjogImh0dHBzOi8vc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9kb3dubG9hZC9zdG9yYWdlL3YxL2Ivc2RhLWRldi11bnRydXN0ZWQtYnVja2V0L28vVExFcyUyRmNlbGVzdHJhY2s/Z2VuZXJhdGlvbj0xNzY0NzUwODEwMTYzNjc3JmFsdD1tZWRpYSIsCiAgImNyYzMyYyI6ICJrVXN6YXc9PSIsCiAgImV0YWciOiAiQ04zVG9JbUJvWkVERUFFPSIKfQo=","messageId":"17234123098074896","message_id":"17234123098074896","publishTime":"2025-12-03T08:33:30.239Z","publish_time":"2025-12-03T08:33:30.239Z"},"subscription":"projects/sky-geo-sat-dev-d-sda-1/subscriptions/eventarc-me-west1-sda-dmz-trigger-spacetrak-temp-sub-302"}
-  {
-    "textPayload": "[2025-12-03T09:54:47.884Z] [INFO] Received event: | Meta: {\"message\":{\"attributes\":{\"bucketId\":\"sda-dev-untrusted-bucket\",\"eventTime\":\"2025-12-03T08:33:30.167295Z\",\"eventType\":\"OBJECT_FINALIZE\",\"notificationConfig\":\"projects/_/buckets/sda-dev-untrusted-bucket/notificationConfigs/1\",\"objectGeneration\":\"1764750810163677\",\"objectId\":\"TLEs/celestrack\",\"payloadFormat\":\"JSON_API_V1\"},\"data\":\"ewogICJraW5kIjogInN0b3JhZ2Ujb2JqZWN0IiwKICAiaWQiOiAic2RhLWRldi11bnRydXN0ZWQtYnVja2V0L1RMRXMvY2VsZXN0cmFjay8xNzY0NzUwODEwMTYzNjc3IiwKICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vc3RvcmFnZS92MS9iL3NkYS1kZXYtdW50cnVzdGVkLWJ1Y2tldC9vL1RMRXMlMkZjZWxlc3RyYWNrIiwKICAibmFtZSI6ICJUTEVzL2NlbGVzdHJhY2siLAogICJidWNrZXQiOiAic2RhLWRldi11bnRydXN0ZWQtYnVja2V0IiwKICAiZ2VuZXJhdGlvbiI6ICIxNzY0NzUwODEwMTYzNjc3IiwKICAibWV0YWdlbmVyYXRpb24iOiAiMSIsCiAgImNvbnRlbnRUeXBlIjogImFwcGxpY2F0aW9uL2pzb24iLAogICJ0aW1lQ3JlYXRlZCI6ICIyMDI1LTEyLTAzVDA4OjMzOjMwLjE2N1oiLAogICJ1cGRhdGVkIjogIjIwMjUtMTItMDNUMDg6MzM6MzAuMTY3WiIsCiAgInN0b3JhZ2VDbGFzcyI6ICJTVEFOREFSRCIsCiAgInRpbWVTdG9yYWdlQ2xhc3NVcGRhdGVkIjogIjIwMjUtMTItMDNUMDg6MzM6MzAuMTY3WiIsCiAgInNpemUiOiAiNTY3Njg3MCIsCiAgIm1kNUhhc2giOiAiSDl4dmlSTTBTY1JwR1VCazhHdHF3Zz09IiwKICAibWVkaWFMaW5rIjogImh0dHBzOi8vc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9kb3dubG9hZC9zdG9yYWdlL3YxL2Ivc2RhLWRldi11bnRydXN0ZWQtYnVja2V0L28vVExFcyUyRmNlbGVzdHJhY2s/Z2VuZXJhdGlvbj0xNzY0NzUwODEwMTYzNjc3JmFsdD1tZWRpYSIsCiAgImNyYzMyYyI6ICJrVXN6YXc9PSIsCiAgImV0YWciOiAiQ04zVG9JbUJvWkVERUFFPSIKfQo=\",\"messageId\":\"17234123098074896\",\"message_id\":\"17234123098074896\",\"publishTime\":\"2025-12-03T08:33:30.239Z\",\"publish_time\":\"2025-12-03T08:33:30.239Z\"},\"subscription\":\"projects/sky-geo-sat-dev-d-sda-1/subscriptions/eventarc-me-west1-sda-dmz-trigger-spacetrak-temp-sub-302\"}",
-    "insertId": "693008e7000d79d0e9a00faf",
-    "resource": {
-      "type": "cloud_run_revision",
-      "labels": {
-        "location": "me-west1",
-        "configuration_name": "sda-dmz-cr-temp",
-        "revision_name": "sda-dmz-cr-temp-00004-p4m",
-        "project_id": "sky-geo-sat-dev-d-sda-1",
-        "service_name": "sda-dmz-cr-temp"
-      }
-    },
-    "timestamp": "2025-12-03T09:54:47.883152Z",
-    "labels": {
-      "instanceId": "0014778296140917dcdd48e4c0d38f6428c9b81b621af12d58660c093515958ce2d2a157fbbf8ac011547a6a21a756c5258aa5ac7d3c0d14f29b35490e1ca101a33f8094f2c442c0527f2bfed418cc784e"
-    },
-    "logName": "projects/sky-geo-sat-dev-d-sda-1/logs/run.googleapis.com%2Fstdout",
-    "receiveTimestamp": "2025-12-03T09:54:47.887363117Z"
-  }
 
 
 <header>
